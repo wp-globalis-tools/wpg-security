@@ -1,0 +1,26 @@
+{
+    "name":"globalis/wpg-security",
+    "type":"wordpress-muplugin",
+    "license":"GPL-2.0",
+    "description":"Collection of WordPress security mu-plugins",
+    "homepage":"https://github.com/wp-globalis-tools/wpg-security",
+    "authors":[
+        {
+            "name":"Pierre Dargham",
+            "homepage":"https://github.com/pierre-dargham/"
+        },
+        {
+            "name":"GLOBALIS media systems",
+            "homepage":"https://www.globalis-ms.com/"
+        }
+   ],
+   "keywords":[
+        "wordpress"
+   ],
+   "support":{
+        "issues":"https://github.com/wp-globalis-tools/wpg-security/issues"
+   },
+   "require":{
+        "php":">=5.5"
+   }
+}

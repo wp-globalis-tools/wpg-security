@@ -1,17 +1,20 @@
 <?php
 /**
- * Plugin Name:         WPG Disable xmlrpc
+ * Plugin Name:         WPG Disable XMLRPC
  * Plugin URI:          https://github.com/wp-globalis-tools/wpg-security
- * Description:         Disable xmlrpc
+ * Description:         Disable XMLRPC if unused
  * Author:              Pierre Dargham, Globalis Media Systems
- * Author URI:          https://www.globalis-ms.com
+ * Author URI:          https://www.globalis-ms.com/
+ * License:             GPL2
  *
- * Version:             0.1.0
+ * Version:             0.2.0
  * Requires at least:   4.0.0
- * Tested up to:        4.7.2
+ * Tested up to:        4.7.8
  */
 
-namespace Globalis\Security\DisableXMLRPC;
+namespace Globalis\WP\DisableXMLRPC;
 
-add_filter('xmlrpc_enabled', '__return_false');
-remove_action('wp_head', 'rsd_link');
+if(!defined('WPG_ENABLE_XMLRPC') || true !== WPG_ENABLE_XMLRPC) {
+	remove_action('wp_head', 'rsd_link');
+	add_filter('xmlrpc_enabled', '__return_false');
+}
