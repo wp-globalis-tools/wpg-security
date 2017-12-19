@@ -14,7 +14,7 @@
 
 namespace Globalis\WP\DisableXMLRPC;
 
-if(!defined('WPG_ENABLE_XMLRPC') || true !== WPG_ENABLE_XMLRPC) {
-	remove_action('wp_head', 'rsd_link');
-	add_filter('xmlrpc_enabled', '__return_false');
+if (!defined('WPG_ENABLE_XMLRPC') || true !== WPG_ENABLE_XMLRPC) {
+    remove_action('wp_head', 'rsd_link');
+    add_filter('xmlrpc_enabled', '__return_false');
 }
